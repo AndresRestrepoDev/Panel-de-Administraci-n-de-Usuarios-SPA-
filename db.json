@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Karthi",
+      "email": "karthi@gmmail.com",
+      "phone": "7305477760",
+      "enrollNumber": "1234567305477760",
+      "dateOfAdmission": "08-Dec-2021"
+    }
+  ]
+}
