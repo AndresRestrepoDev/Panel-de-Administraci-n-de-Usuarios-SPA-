@@ -51,13 +51,13 @@
       "image": "https://i.ytimg.com/vi/tEcCJp-MOQg/maxresdefault.jpg"
     },
     {
-      "id": "0639",
-      "name": "Santiago Garces",
-      "email": "santi@wee.com",
-      "phone": "11332131313",
-      "enrollNumber": "ad31dsd231",
-      "dateOfAdmission": "1212121",
-      "image": ""
+      "name": "Diego Maradona",
+      "email": "diego@example.com",
+      "phone": "3113778902",
+      "enrollNumber": "abc123abc",
+      "dateOfAdmission": "06/05/2025",
+      "image": "https://cdn.conmebol.com/wp-content/uploads/2023/10/000_322A2WL-1024x683.jpg",
+      "id": "CsamQtw"
     }
   ]
 }

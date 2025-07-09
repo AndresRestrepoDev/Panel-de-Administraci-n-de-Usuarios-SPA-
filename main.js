@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /*
+   * ================================
+   * INICIALIZACIÓN DEL SPA Y ROUTING CLIENTE
+   * ================================
+   * - Configura el enrutamiento basado en hash para navegación sin recarga.
+   * - Escucha clicks en enlaces con atributo [data-link] para cambiar la vista.
+   * - Carga la vista inicial según el hash de la URL.
+   * - Escucha cambios en el hash para navegación con botones del navegador.
+   */
   // Manejador de clics SPA con hash routing
   document.body.addEventListener("click", (e) => {
     const link = e.target.closest("[data-link]");
@@ -20,13 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ================================
-// Función para cargar vistas
-// ================================
+/*
+ * ================================
+ * CONTROLADOR DE VISTAS PRINCIPAL (cargarVista)
+ * ================================
+ * - Renderiza dinámicamente la vista correspondiente según la ruta hash.
+ * - Gestiona la lógica de CRUD para usuarios: listar, agregar, eliminar y actualizar.
+ * - Cada sección está separada por el tipo de acción y maneja la interacción con la API REST.
+ */
 function cargarVista(ruta) {
   const renderizador = document.getElementById("renderizador-index");
 
   if (ruta === "#/users") {
+    /*
+     * ----------- VISTA: LISTADO DE USUARIOS -----------
+     * - Obtiene y renderiza la lista de usuarios desde la API REST.
+     * - Genera tarjetas de usuario con acciones de editar y eliminar.
+     */
     fetch("main.html")
       .then(res => res.text())
       .then(html => {
@@ -67,12 +86,18 @@ function cargarVista(ruta) {
       });
 
   } else if (ruta === "#/add") {
+    /*
+     * ----------- VISTA: AGREGAR USUARIO -----------
+     * - Renderiza el formulario de alta de usuario.
+     * - Envía los datos del formulario a la API REST para crear un nuevo usuario.
+     */
     fetch("addModal.html")
       .then(res => res.text())
       .then(html => {
         renderizador.innerHTML = html;
 
         const formulario = document.getElementById("formulario");
+        const cancelar = document.getElementById("cerrar-modal");
 
         formulario.addEventListener("submit", function (e) {
           e.preventDefault();
@@ -105,8 +130,18 @@ function cargarVista(ruta) {
               alert("❌ Error al guardar.");
             });
         });
+        // ✅ Cancelar
+        cancelar.addEventListener("click", () => {
+          location.hash = "#/users";
+          cargarVista("#/users");
+        });
       });
   } else if (ruta.startsWith("#/delete")) {
+    /*
+     * ----------- VISTA: ELIMINAR USUARIO -----------
+     * - Renderiza el modal de confirmación de borrado.
+     * - Realiza la petición DELETE a la API REST para eliminar el usuario.
+     */
       const params = new URLSearchParams(ruta.split("?")[1]);
       const id = params.get("id");
 
@@ -139,6 +174,12 @@ function cargarVista(ruta) {
           });
         });
     } else if (ruta.startsWith("#/update")) {
+      /*
+       * ----------- VISTA: ACTUALIZAR USUARIO -----------
+       * - Renderiza el formulario de edición de usuario.
+       * - Obtiene los datos actuales del usuario desde la API REST.
+       * - Permite modificar y guardar los cambios mediante una petición PUT.
+       */
         const params = new URLSearchParams(ruta.split("?")[1]);
         const id = params.get("id");
 
