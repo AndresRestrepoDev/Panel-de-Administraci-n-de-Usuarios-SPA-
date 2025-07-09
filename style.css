@@ -1,0 +1,313 @@
+* {    /* reset básico */
+  box-sizing: border-box;  /* Con border-box, el ancho y alto incluyen el padding y el borde. */
+  margin: 0;  /* Elimina el margen exterior predeterminado de todos los elementos. */
+  padding: 0; /* Elimina el espaciado interior predeterminado. */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Estilos para la aside bar */
+aside{
+    background-color: #F2EAE1;
+    height: 100vh;  /* Ajusta la altura del tamaño de toda la pagina */
+    width: 270px;
+    display: flex;       /* Estas 4 reglas ajustan el contenido de manera vertical y distribuye el espacio */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    margin-top: 20px;
+    text-align: center;
+}
+/* Tando header como footer separan su contenido de su respectivo limite */
+footer{
+    margin-bottom: 20px;
+}
+
+.contenedor-profile-info{
+    margin-top: 20px; /* Lo uso para separar la imagen, nombre, tipo de usuario del h1 */
+}
+
+.profile{  /* Clase usada para la imagen del tipo de usuario */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover;  /* Para que se ajuste sin deformarse */
+}
+
+.icono{ /* Clase para darle los mismos estilos a todos los iconos */
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; /* separación entre ícono y texto */
+}
+
+footer, .icono{
+    margin-left: 15px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;         /* Centra ícono y texto verticalmente */
+    align-items: center;  /* Centra ícono y texto verticalmente */
+}
+
+h1 {
+  color: black;                  /* color del relleno */
+  -webkit-text-stroke: 1px #E042F8; /* borde negro de 1px */
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cambioColor{
+    color: #E042F8;
+}
+
+.barra{
+    height: 25px;
+    width: 5px;
+    background-color: #E042F8;
+    border-radius: 2px;
+}
+
+.titulo-barra{
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre barra y título */
+}
+
+
+/* Estilos para mi vista principal donde listo todos los estudiantes main.html */
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+main {
+    flex: 1;
+    overflow-y: auto;/*Solucione el problema del scroll mi aside bar queda fija y solo se scrolea el main o body*/
+    padding: 20px; /* opcional: mejora lectura */
+}
+
+
+html, body {
+    height: 100%;
+}
+
+
+
+.img-main{   /* aca le estoy dando estilos a los iconos de mi html main */
+    width: 20px;
+    height: 20px;
+}
+
+
+.box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 25px;    
+}
+
+.box-interno{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.box-interno2{
+    display: flex;
+    gap: 20px;
+}
+
+.box-text{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.btn-add{
+    background-color: #6A00FE;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/* Estilos a la lista que muestra los usuarios por filas */
+.fila-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fila-usuario__item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: 20%;
+}
+
+.foto-estudiante {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.fila-usuario p {
+    width: 15%;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.acciones {
+    display: flex;
+    gap: 20px;
+}
+
+.icono-accion {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario add new student */
+
+/* Centra la sección completa */
+.section-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Caja blanca del formulario */
+.contenedor-dos-form {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.titulo-form {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Estilo inputs */
+.contenedor-dos-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    display: flex;
+}
+
+.contenedor-dos-form input:focus {
+    border-color: #6200ee;
+    outline: none;
+}
+
+/* Estilo botones */
+.contenedor-dos-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botón Save */
+.contenedor-dos-form button[type="submit"] {
+    background-color: #6200ee;
+    color: white;
+}
+
+.contenedor-dos-form button[type="submit"]:hover {
+    background-color: #4b00c8;
+}
+
+/* Botón Cancelar */
+#cerrar-modal {
+    background-color: #bbb;
+    color: white;
+}
+
+#cerrar-modal:hover {
+    background-color: #999;
+}
+
+
+/* estilos para el validador de eliminar */
+.section-eliminar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.contenedor-eliminar{
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

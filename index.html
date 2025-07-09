@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto SPA</title>
-    <a href="https://www.flaticon.es/iconos-gratis/birrete" title="birrete iconos">Birrete iconos creados por Good Ware - Flaticon</a>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <aside>
         <header>
-            <h1>CRUD OPERATIONS</h1>
-            <img src="./Assets/profile.jpg" alt="profile">
-            <h2>Random guy</h2>
-            <p>Admin</p>
+            <div class="titulo-barra">
+                <span class="barra"></span>
+                <h1>CRUD OPERATIONS</h1>
+            </div>
+            <div class="contenedor-profile-info">
+                <img src="./Assets/profile.jpg" alt="profile" class="profile">
+                <h2>Random guy</h2>
+                <p class="cambioColor">Admin</p>
+            </div>
         </header>
         <nav>
-            <a href="#"> <img src="./Assets/home.png" alt="iconoHome">Home</a>
-            <a href="#"> <img src="./Assets/icons8-guardar-marcador-48.png" alt="iconoCourse">Course</a>
-            <a href="#"> <img src="./Assets/birrete.png" alt="iconoBirrete">Users</a>
-            <a href="#"> <img src="./Assets/peso.png" alt="iconoPeso">Payment</a>
-            <a href="#"> <img src="./Assets/reporte.png" alt="iconoReporte">Report</a>
-            <a href="#"> <img src="./Assets/ajustes.png" alt="iconoAjuste">Settings</a>
+            <a href="#"> <img src="./Assets/home.png" alt="iconoHome" class="icono">Home</a>
+            <a href="#"> <img src="./Assets/icons8-guardar-marcador-48.png" alt="iconoCourse" class="icono">Course</a>
+            <a href="#/users" data-link> <img src="./Assets/birrete.png" alt="iconoBirrete" class="icono">Users</a>
+            <a href="#"> <img src="./Assets/peso.png" alt="iconoPeso" class="icono">Payment</a>
+            <a href="#"> <img src="./Assets/reporte.png" alt="iconoReporte" class="icono">Report</a>
+            <a href="#"> <img src="./Assets/ajustes.png" alt="iconoAjuste" class="icono">Settings</a>
         </nav>
         <footer>
-            <a href="#">Logout<img src="./Assets/cerrar-sesion.png" alt="iconoSalir"> </a>
+            <a href="#">Logout<img src="./Assets/cerrar-sesion.png" alt="iconoSalir" class="icono"></a>
         </footer>
     </aside>
-    <main>
 
-    </main>
+    <main id="renderizador-index"> </main>
+    
+    <script src="main.js"></script>
 </body>
 </html>

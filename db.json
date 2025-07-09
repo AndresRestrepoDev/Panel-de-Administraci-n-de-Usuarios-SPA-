@@ -1,12 +1,63 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Karthi",
-      "email": "karthi@gmmail.com",
-      "phone": "7305477760",
-      "enrollNumber": "1234567305477760",
-      "dateOfAdmission": "08-Dec-2021"
+      "id": "1",
+      "name": "Juan Pérez",
+      "email": "juan@example.com",
+      "phone": "3011234567",
+      "enrollNumber": "EN12345678",
+      "dateOfAdmission": "2023-06-15"
+    },
+    {
+      "id": "2",
+      "name": "Ana Gómez",
+      "email": "ana@example.com",
+      "phone": "3027654321",
+      "enrollNumber": "EN87654321",
+      "dateOfAdmission": "2023-05-10"
+    },
+    {
+      "id": "3",
+      "name": "Felipe Marin",
+      "email": "felipe@example.com",
+      "phone": "122334321",
+      "enrollNumber": "ABCD654321",
+      "dateOfAdmission": "2025-12-03"
+    },
+    {
+      "id": "4",
+      "name": "Andres Restrepo",
+      "email": "andres@example.com",
+      "phone": "122334321",
+      "enrollNumber": "ABCD654321",
+      "dateOfAdmission": "2025-12-03"
+    },
+    {
+      "name": "Janier Lopez",
+      "email": "janier@yahoo.com",
+      "phone": "0",
+      "enrollNumber": "abc",
+      "dateOfAdmission": "12/01/2222",
+      "image": "",
+      "id": "8afd"
+    },
+    {
+      "id": "42a8",
+      "name": "Alejandra Garzon",
+      "email": "aleja@example.com",
+      "phone": "300 123 12 21",
+      "enrollNumber": "adafd211331das",
+      "dateOfAdmission": "12/01/2025",
+      "image": "https://i.ytimg.com/vi/tEcCJp-MOQg/maxresdefault.jpg"
+    },
+    {
+      "id": "0639",
+      "name": "Santiago Garces",
+      "email": "santi@wee.com",
+      "phone": "11332131313",
+      "enrollNumber": "ad31dsd231",
+      "dateOfAdmission": "1212121",
+      "image": ""
     }
   ]
 }
